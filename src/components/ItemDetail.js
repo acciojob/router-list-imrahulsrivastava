@@ -6,8 +6,8 @@ function ItemDetail({ users }) {
 
   return (
     <div>
-      <h1>Item Detail</h1>
-      <p>{users[userId].company.catchPhrase}</p>
+      <h1>Item {userId}</h1>
+      <p>{users[userId - 1].company.catchPhrase}</p>
     </div>
   );
 }
