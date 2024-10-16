@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 
 function ItemList({ users }) {
   return (
-    <ul>
-      {users.length > 0 &&
-        users.map((user) => (
-          <li key={user.id}>
-            <Link to={`/users/${user.id}`}>{user.name}</Link>
-          </li>
-        ))}
-    </ul>
+    <div>
+      <h1>Item List</h1>
+      <ul>
+        {users.length > 0 &&
+          users.map((user) => (
+            <li key={user.id}>
+              <Link to={`/users/${user.id}`}>Item {user.id}</Link>
+            </li>
+          ))}
+      </ul>
+    </div>
   );
 }
 
