@@ -1,4 +1,4 @@
 {
-    "testRepo": "router-list-solution",
-    "pathToFile": "cypress/integration/tests/test.spec.js"
+  "testRepo": "router-list-solution",
+  "pathToFile": "cypress/integration/tests/test.spec.js"
 }
