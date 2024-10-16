@@ -7,7 +7,7 @@ function ItemDetail({ users }) {
   return (
     <div>
       <h1>Item {userId}</h1>
-      <p>{users[userId - 1].company.catchPhrase}</p>
+      <p>Description for Item {userId}</p>
     </div>
   );
 }

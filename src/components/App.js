@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./../styles/App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Navbar from "./Navbar.js";
 import ItemList from "./ItemList.js";
 import ItemDetail from "./ItemDetail.js";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then(
-        (data) => !console.log(data.slice(0, 3)) && setUsers(data.slice(0, 3))
-      );
-  }, []);
-
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<ItemList users={users} />} />
-          <Route path="/users/:userId" element={<ItemDetail users={users} />} />
+          <Route path="/" element={<ItemList />} />
+          <Route path="/users/:userId" element={<ItemDetail />} />
         </Routes>
       </div>
     </BrowserRouter>
